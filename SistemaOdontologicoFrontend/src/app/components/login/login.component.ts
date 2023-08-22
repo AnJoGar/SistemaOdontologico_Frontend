@@ -70,7 +70,7 @@ export class LoginComponent {
     this._usuarioServicio.ObtenerUsuarios();
   }
 
-  onLogin2() {
+  onLogin() {
     this.loading = true;
     const request: Login = {
 

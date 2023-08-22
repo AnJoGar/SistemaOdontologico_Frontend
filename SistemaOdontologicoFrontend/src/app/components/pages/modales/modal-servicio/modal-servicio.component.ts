@@ -72,10 +72,10 @@ export class ModalServicioComponent {
       this._servicioService.guardarServicio(_Servicio).subscribe({
         next: (data) => {
           if (data.status) {
-            this.mostrarAlerta("El producto fue registrado", "Exito");
+            this.mostrarAlerta("El servicio fue registrado", "Exito");
             this.dialogoReferencia.close('agregado')
           } else {
-            this.mostrarAlerta("No se pudo registrar el producto", "Error");
+            this.mostrarAlerta("No se pudo registrar el servicio", "Error");
           }
         },
         error: (e) => {

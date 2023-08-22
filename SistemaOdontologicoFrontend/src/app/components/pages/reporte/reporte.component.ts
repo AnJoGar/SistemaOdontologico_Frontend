@@ -93,7 +93,7 @@ export class ReporteComponent implements OnInit {
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
-  onSubmitForm() {
+  FiltrarCitaFecha() {
     const _fechaInicio: any = moment(this.formGroup.value.fechaInicio).format('DD/MM/YYYY')
     const _fechaFin: any = moment(this.formGroup.value.fechaFin).format('DD/MM/YYYY')
     if (_fechaInicio === "Invalid date" || _fechaFin === "Invalid date") {

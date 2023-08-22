@@ -2,7 +2,7 @@
 <h1 class="page-title" style="color: #17789e;">Reporte de citas odontológicas</h1>
 <mat-card class="card" style="margin: 20px 40px 40px 40px">
   <mat-card-content class="dashboard-card-content">
-    <form class="example-form" [formGroup]="formGroup" (ngSubmit)="onSubmitForm()">
+    <form class="example-form" [formGroup]="formGroup" (ngSubmit)="FiltrarCitaFecha()">
       <mat-grid-list cols="4" rowHeight="80px">
         <mat-grid-tile>
           <mat-form-field appearance="fill">

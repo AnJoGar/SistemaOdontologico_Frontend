@@ -195,10 +195,10 @@ export class ModalEditarCitaComponent implements OnInit {
       this._CitaServicio.editarCita(citaDTO).subscribe({
         next: (data) => {
           if (data.status) {
-            this.mostrarAlerta("El producto fue editado", "Exito");
+            this.mostrarAlerta("La Cita fue editada", "Exito");
             this.dialogoReferencia.close('editado')
           } else {
-            this.mostrarAlertaError("No se pudo editar el producto", "Error", "Error específico: el producto no se pudo editar debido a ...");
+            this.mostrarAlertaError("No se pudo editar la cita", "Error", "Error específico: la cita no se pudo editar debido a ...");
           }
         },
         error: (e) => { },
