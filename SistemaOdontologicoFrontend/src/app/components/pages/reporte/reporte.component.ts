@@ -135,27 +135,5 @@ export class ReporteComponent implements OnInit {
       }
     })
   }
-  onSubmitForm1() {
-    const _fechaInicio: any = moment(this.formGroup.value.fechaInicio, 'DD/MM/YYYY');
-    const _fechaFin: any = moment(this.formGroup.value.fechaFin, 'DD/MM/YYYY');
-    if (!_fechaInicio && !_fechaFin) {
-    return;
-  }
-    if (!_fechaInicio.isValid() || !_fechaFin.isValid()) {
-      this._snackBar.open("Debe ingresar ambas fechas", 'Oops!', { duration: 2000 });
-      this.dataSource.data = this.ELEMENT_DATA;
-      return;
-    }
-    const filteredData = this.ELEMENT_DATA.filter((item) => {
-      const fechaReserva: any = moment(item.fechaReserva, 'DD/MM/YYYY');
-      return fechaReserva.isBetween(_fechaInicio, _fechaFin, null, '[]');
-    });
-  
-    if (filteredData.length > 0) {
-      this.dataSource.data = filteredData;
-    } else {
-      this.dataSource.data = [];
-      this._snackBar.open("No se encontraron datos", 'Oops!', { duration: 2000 });
-    }
-  }
+ 
 }

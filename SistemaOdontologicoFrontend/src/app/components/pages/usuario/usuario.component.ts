@@ -201,28 +201,5 @@ applyFilterEstado() {
     });
   }
 
-  eliminarU(usuario:Usuario){
-Swal.fire({
-  title:"Desea eliminar el usuario",
-  text:usuario.nombreApellidos,
-  icon:'warning',
-  confirmButtonColor:'#3085d6',
-showCancelButton:true,
-cancelButtonColor: '#3085d6',
 
-}).then(result => {
-  if(result.isConfirmed)
-  this._usuarioServicio.EliminarUsuario(usuario.id).subscribe({
-    next: (data) =>{
-      if (data.status) {
-        this.mostrarAlerta("El usuario fue eliminado", "Listo!")
-        this.mostrarUsuarios();
-      } else {
-        this.mostrarAlerta("No se pudo eliminar el usuario", "Error");
-      }
-    },
-      error: (e) => {}
-    })
-  })
-  }
 }
