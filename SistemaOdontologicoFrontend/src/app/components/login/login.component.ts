@@ -26,14 +26,9 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
 })
 export class LoginComponent {
 
-
-
-
   formLogin: FormGroup;
   hidePassword: boolean = true;
   loading: boolean = false;
-
-
   constructor(
     private fb: FormBuilder,
     private router: Router,
@@ -51,7 +46,6 @@ export class LoginComponent {
 
   ngOnInit(): void {
   }
-
 
   mostrarAlerta(mensaje: string, tipo: string) {
     this._snackBar.open(mensaje, tipo, {
@@ -72,13 +66,9 @@ export class LoginComponent {
 
   }
 
-
-
   mostrarUsuarios() {
     this._usuarioServicio.ObtenerUsuarios();
   }
-
-
 
   onLogin2() {
     this.loading = true;
